@@ -509,18 +509,19 @@ model or a digital 3D model.[Wikipedia]")
       (represents ?X ?A)
       (instance ?A Artifact)
       (result ?P ?A))))
-      
-(=>
-  (and
-    (instance ?P ThreeDPrinting)
-    (instance ?X Substance)
-    (resource ?P ?X))
-  (exists (?R)
-    (and
-      (instance ?R Reservoir)
-      (part ?R ?P)
-      (origin ?P ?R)
-      (located ?X ?R))))
+
+;Commenting out to be fixed later
+;(=>
+;  (and
+;    (instance ?P ThreeDPrinting)
+;    (instance ?X Substance)
+;    (resource ?P ?X))
+;  (exists (?R)
+;    (and
+;      (instance ?R Reservoir)
+;      (part ?R ?P)
+;      (origin ?P ?R)
+;      (located ?X ?R))))
 
 (=>
   (and      
